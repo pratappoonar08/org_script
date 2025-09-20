@@ -29,6 +29,7 @@ const cors_1 = __importDefault(require("cors"));
 const socket_1 = require("./engine/socket");
 const express_session_1 = __importDefault(require("express-session"));
 const auth_1 = require("./engine/auth");
+const export_1 = require("./engine/export");
 const sessMid = (0, express_session_1.default)({
     secret: site_1.Site.AUTH_SESSION_SECRET,
     resave: false,
@@ -68,6 +69,7 @@ app.use((req, res, next) => {
 app.use(sessMid);
 io.engine.use(sessMid);
 app.use(auth_1.authEntry);
+app.get("/export/:org/:file", export_1.ExportEngine.route);
 app.use(express_1.default.static(path_1.default.join(site_1.Site.ROOT, "public"), {
     maxAge: site_1.Site.PRODUCTION ? CACHE_PROD : 0,
 }));
